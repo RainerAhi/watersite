@@ -21,7 +21,7 @@ export default function Model(props) {
 
     tl
     .to(model.current.rotation, {
-      y: Math.PI * 2.5,
+      z: -Math.PI * 0.25,
       scrollTrigger: {
         trigger: ".two",
         start: "top bottom",
@@ -32,8 +32,9 @@ export default function Model(props) {
     })
 
     .to(scene.position, {
-      z: 2,
-      y: 0.5,
+      z: 0,
+      y: 0,
+      x: -1.5,
 
       scrollTrigger: {
         trigger: ".two",
@@ -47,8 +48,8 @@ export default function Model(props) {
     //SECOND TO THIRD
 
     .to(scene.position, {
-      z: -3,
-      x: 2,
+      z: 0,
+      x: 3,
       y: 0,
       scrollTrigger: {
         trigger: ".three",
@@ -60,7 +61,7 @@ export default function Model(props) {
     })
 
     .to(model.current.rotation, {
-      y: Math.PI * 5,
+      z: Math.PI * 0.25,
       scrollTrigger: {
         trigger: ".three",
         start: "top bottom",
@@ -74,7 +75,7 @@ export default function Model(props) {
     
     .to(scene.position, {
       z: 0,
-      x: 0,
+      x: 0.25,
       y: 0,
       scrollTrigger: {
         trigger: ".four",
@@ -87,7 +88,7 @@ export default function Model(props) {
 
     
     .to(model.current.rotation, {
-      y: Math.PI * 7.5,
+      z: Math.PI * 2,
       scrollTrigger: {
         trigger: ".four",
         start: "top bottom",
@@ -100,7 +101,20 @@ export default function Model(props) {
     // FOUR TO FIVE
 
     .to(model.current.rotation, {
-      y: Math.PI * 10,
+      z: Math.PI * 4,
+      scrollTrigger: {
+        trigger: ".five",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+    .to(scene.position, {
+      z: -3,
+      x: 0.25,
+      y: 0,
       scrollTrigger: {
         trigger: ".five",
         start: "top bottom",
@@ -167,8 +181,8 @@ export default function Model(props) {
     })
 
     .to(scene.position, {
-      z: -2.5,
-      x: 2.5,
+      z: 0,
+      x: 3,
       y: 0,
       scrollTrigger: {
         trigger: ".seven",
@@ -218,8 +232,8 @@ export default function Model(props) {
 
     .to(scene.position, {
       z: 0,
-      x: -5,
-      y: -1.5,
+      x: -2,
+      y: 0,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -230,9 +244,9 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 1.5,
-      y: 1.5,
-      z: 1.5,
+      x: 1,
+      y: 1,
+      z: 1,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -250,7 +264,7 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF("./mac.glb");
   return (
     <group {...props} dispose={null}>
-      <group ref={model} scale={ 1.5 } >
+      <group ref={model} scale={ 1.5 } rotation={[Math.PI / 2, 0, 0]} >
       <group
         position={[0.046, 0, 0.662]}
         rotation={[Math.PI / 2, 0, 0]}
