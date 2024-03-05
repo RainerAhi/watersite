@@ -33,7 +33,7 @@ export default function Model(props) {
 
     .to(scene.position, {
       z: 2,
-      y: -0.5,
+      y: 0.5,
 
       scrollTrigger: {
         trigger: ".two",
@@ -49,7 +49,7 @@ export default function Model(props) {
     .to(scene.position, {
       z: -3,
       x: 2,
-      y: 0.5,
+      y: 0,
       scrollTrigger: {
         trigger: ".three",
         start: "top bottom",
@@ -139,9 +139,9 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 2,
-      y: 2,
-      z: 2,
+      x: 1.25,
+      y: 1.25,
+      z: 1.25,
       scrollTrigger: {
         trigger: ".six",
         start: "top bottom",
@@ -154,9 +154,9 @@ export default function Model(props) {
     //SIX TO SEVEN
 
     .to(bracelet.current.scale, {
-      x: 2,
-      y: 2,
-      z: 2,
+      x: 1.25,
+      y: 1.25,
+      z: 1.25,
       scrollTrigger: {
         trigger: ".seven",
         start: "top bottom",
@@ -218,8 +218,8 @@ export default function Model(props) {
 
     .to(scene.position, {
       z: 0,
-      x: -4.5,
-      y: 1,
+      x: -5,
+      y: -1.5,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -230,9 +230,9 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 2,
-      y: 2,
-      z: 2,
+      x: 1.5,
+      y: 1.5,
+      z: 1.5,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -247,167 +247,62 @@ export default function Model(props) {
   }, [])
 
 
-  const { nodes, materials } = useGLTF("./scene.gltf");
+  const { nodes, materials } = useGLTF("./mac.glb");
   return (
     <group {...props} dispose={null}>
-      <group scale={0.01}>
-        <group ref={model} scale={ 4 }>
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_1.geometry}
-            material={nodes.object_1.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.enagicscreenpng.geometry}
-            material={nodes.enagicscreenpng.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_2.geometry}
-            material={nodes.object_2.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_3.geometry}
-            material={nodes.object_3.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_4.geometry}
-            material={nodes.object_4.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_5.geometry}
-            material={nodes.object_5.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_6.geometry}
-            material={nodes.object_6.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_7.geometry}
-            material={nodes.object_7.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_8.geometry}
-            material={nodes.object_8.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_9.geometry}
-            material={nodes.object_9.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_10.geometry}
-            material={nodes.object_10.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_11.geometry}
-            material={nodes.object_11.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_12.geometry}
-            material={nodes.object_12.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_13.geometry}
-            material={nodes.object_13.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.object_14.geometry}
-            material={nodes.object_14.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.body.geometry}
-            material={nodes.body.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.hose1.geometry}
-            material={nodes.hose1.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.leg_1.geometry}
-            material={nodes.leg_1.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.leg_004.geometry}
-            material={nodes.leg_004.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.leg_003.geometry}
-            material={nodes.leg_003.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.leg_002.geometry}
-            material={nodes.leg_002.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.Object002_Retopo001.geometry}
-            material={nodes.Object002_Retopo001.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.Object002_Retopo.geometry}
-            material={nodes.Object002_Retopo.material}
-          />
-          <mesh
-            castShadow
-            receiveShadow
-            geometry={nodes.Line005.geometry}
-            material={nodes.Line005.material}
-          />
-        </group>
-        <group ref={bracelet} scale={ 0 } >
+      <group ref={model} scale={ 1.5 } >
+      <group
+        position={[0.046, 0, 0.662]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.028}
+      >
         <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes.Sphere.geometry}
-          material={nodes.Sphere.material}
+          geometry={nodes.Displey_1.geometry}
+          material={materials["enagicscreen.001"]}
         />
-        </group>
+        <mesh
+          geometry={nodes.Displey_2.geometry}
+          material={materials["Lavender Opaque Plastic.001"]}
+        />
+      </group>
+      <group
+        position={[0.046, 0, 0.662]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={0.028}
+      >
+        <mesh
+          geometry={nodes.Mesh_0.geometry}
+          material={materials["Lavender Opaque Plastic"]}
+        />
+        <mesh
+          geometry={nodes.Mesh_0_1.geometry}
+          material={materials["Light Gray Transparent Plastic"]}
+        />
+        <mesh
+          geometry={nodes.Mesh_0_2.geometry}
+          material={materials.enagicscreen}
+        />
+      </group>
+      <group
+        position={[0.046, 0, 0.001]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={0.028}
+      >
+        <mesh
+          geometry={nodes.Mesh_1.geometry}
+          material={materials["Material.002"]}
+        />
+        <mesh
+          geometry={nodes.Mesh_1_1.geometry}
+          material={materials["Light Gray Opaque Plastic"]}
+        />
+      </group>
+      </group>
+      <group ref={bracelet} scale={ 0 } >
+        <mesh geometry={nodes.Sphere.geometry} material={nodes.Sphere.material} />
       </group>
     </group>
   );
 }
 
-useGLTF.preload("./scene.gltf");
+useGLTF.preload("./mac.glb");

@@ -21,11 +21,11 @@ body,
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: rgba(168,183,242,1);
 }
 /* TRACK */
 ::-webkit-scrollbar-track {
-  background-color: black;
+  background-color: rgba(95,130,243,1);
 }
 
 .section {
