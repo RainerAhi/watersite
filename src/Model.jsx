@@ -153,9 +153,9 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 1.25,
-      y: 1.25,
-      z: 1.25,
+      x: 4,
+      y: 4,
+      z: 4,
       scrollTrigger: {
         trigger: ".six",
         start: "top bottom",
@@ -168,9 +168,9 @@ export default function Model(props) {
     //SIX TO SEVEN
 
     .to(bracelet.current.scale, {
-      x: 1.25,
-      y: 1.25,
-      z: 1.25,
+      x: 2.5,
+      y: 2.5,
+      z: 2.5,
       scrollTrigger: {
         trigger: ".seven",
         start: "top bottom",
@@ -194,7 +194,7 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.rotation, {
-      z: Math.PI * 2.5,
+      y: Math.PI * 1.75,
       scrollTrigger: {
         trigger: ".seven",
         start: "top bottom",
@@ -207,7 +207,7 @@ export default function Model(props) {
     //SEVEN TO EIGHT
 
     .to(bracelet.current.rotation, {
-      z: Math.PI * 4,
+      y: Math.PI * 1.75,
       scrollTrigger: {
         trigger: ".eight",
         start: "top bottom",
@@ -220,7 +220,7 @@ export default function Model(props) {
     // EIGHT TO NINE 
 
     .to(bracelet.current.rotation, {
-      z: Math.PI * 6,
+      y: Math.PI * -2.1,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -244,9 +244,9 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 1,
-      y: 1,
-      z: 1,
+      x: 2,
+      y: 2,
+      z: 2,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -261,7 +261,7 @@ export default function Model(props) {
   }, [])
 
 
-  const { nodes, materials } = useGLTF("./mac.glb");
+  const { nodes, materials } = useGLTF("./watermachine.glb");
   return (
     <group {...props} dispose={null}>
       <group ref={model} scale={ 1.5 } rotation={[Math.PI / 2, 0, 0]} >
@@ -313,10 +313,16 @@ export default function Model(props) {
       </group>
       </group>
       <group ref={bracelet} scale={ 0 } >
-        <mesh geometry={nodes.Sphere.geometry} material={nodes.Sphere.material} />
+      <mesh
+        geometry={nodes.Air_splash.geometry}
+        material={materials["Lavender Opaque Plastic"]}
+        position={[0.005, -0.002, 0.016]}
+        rotation={[Math.PI / 2, 0, 0]}
+        scale={0.1}
+      />
       </group>
     </group>
   );
 }
 
-useGLTF.preload("./mac.glb");
+useGLTF.preload("./watermachine.glb");
