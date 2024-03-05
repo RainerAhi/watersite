@@ -244,9 +244,22 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 2,
-      y: 2,
-      z: 2,
+      x: 3,
+      y: 3,
+      z: 3,
+      scrollTrigger: {
+        trigger: ".nine",
+        start: "top bottom",
+        end: "bottom bottom",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+
+    .to(model.current.scale, {
+      x: 0.75,
+      y: 0.75,
+      z: 0.75,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
