@@ -17,7 +17,7 @@ export const SectionFive = () => {
         <div className="divide" />
         <p>05. Apoyo en la prevención y tratamiento del cáncer</p>
         <div className="divide" />
-        <h1 className="five-subheading" >AGENDA TU DEMO</h1>
+        <h1 className="five-subheading" ><a href="tel:+525630501020" target="_blank">Agenda tu Demo</a></h1>
     </div>
 
 </section>

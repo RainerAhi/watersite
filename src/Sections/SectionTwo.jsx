@@ -9,7 +9,7 @@ export const SectionTwo = () => {
         <h1 className="two-title" >KANGEN es Hidratación</h1>
         <p className="two-description" >Por fin Ilego a México Ia mejor manera de hidratarse, para ti y para tu familia, los beneficios son innumerables.</p>
         <div className="learn-more" >
-            <h1>Agenda tu Demo</h1>
+            <h1><a href="tel:+525630501020" target="_blank">Agenda tu Demo</a></h1>
         </div>
     </div>
     </div>
