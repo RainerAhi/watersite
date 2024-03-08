@@ -3,6 +3,7 @@ import React from "react";
 export const SectionTwo = () => {
     return (
 <section className="section two">
+    <div className="two-box" >
     <div className="twotext">
         <h1 className="two-subheading" >LOREM IPSUM DOLOR SIT AMET</h1>
         <h1 className="two-title" >LOREM IPSUM DOLOR SIT</h1>
@@ -10,6 +11,7 @@ export const SectionTwo = () => {
         <div className="learn-more" >
             <h1>LOREM IPSUM</h1>
         </div>
+    </div>
     </div>
 </section>
     )

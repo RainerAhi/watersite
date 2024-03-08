@@ -5,6 +5,7 @@ export const SectionOne = () => {
 
     return (
       <section className="section one">
+      <div className="two-box" >
       <div className="nav">
           <div className="left-content">
               <img className="smalllogo" src="/logoimage.png" alt="Small Logo" />
@@ -23,6 +24,7 @@ export const SectionOne = () => {
           <div id="text-behind">LOREMIPS<br />DOLORSITAM</div>
           <div id="text-behind-blur">LOREMIPS<br />DOLORSITAM</div>
           <div id="text-front">LOREMIPS<br />DOLORSITAM</div>
+      </div>
       </div>
   </section>
     )
