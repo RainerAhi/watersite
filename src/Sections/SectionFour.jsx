@@ -13,11 +13,11 @@ export const SectionFour = () => {
             <i className="fa-solid fa-star"></i>
             <i className="fa-solid fa-star"></i>
             </div>
-            <p className="review-text" >Lorem ipsum dolor sit amet</p>
+            <p className="review-text" >El agua Kangen energiza y revitaliza tu cuerpo.</p>
             <div  className="divider" />
             <div className="user" >
                 <i className="fa-solid fa-user"></i>
-                <p>@johndoe</p>
+                <p>@TonyRobbins</p>
             </div>
         </div>
 
@@ -29,11 +29,11 @@ export const SectionFour = () => {
             <i className="fa-solid fa-star"></i>
             <i className="fa-solid fa-star"></i>
             </div>
-            <p className="review-text" >Consectetur adipiscing elit</p>
+            <p className="review-text" >Innovación en hidratación: Kangen cambia el juego.</p>
             <div  className="divider" />
             <div className="user" >
                 <i className="fa-solid fa-user"></i>
-                <p>@johndoe</p>
+                <p>@billgates</p>
             </div>
         </div>
 
@@ -48,13 +48,13 @@ export const SectionFour = () => {
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             </div>
-            <p className="review-text" >Sed do eiusmod</p>
+            <p className="review-text" >Kangen fortalece, perfecto para el cuerpo del guerrero.</p>
             <div  className="divider" />
             <div className="user" >
                 <i class="fa-solid fa-user"></i>
-                <p>@johndoe</p>
+                <p>@StevenSegal</p>
             </div>
-        </div>
+    </div>
 
         <div className="review fourth" >
             <div className="stars" >
@@ -64,11 +64,11 @@ export const SectionFour = () => {
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
             </div>
-            <p className="review-text" >Tempor incididunt ut labore et dolore</p>
+            <p className="review-text" >Kangen ayuda a mantenerme en mi mejor forma.</p>
             <div  className="divider" />
             <div className="user" >
                 <i class="fa-solid fa-user"></i>
-                <p>@johndoe</p>
+                <p>@magicjohnson</p>
             </div>
         </div>
 

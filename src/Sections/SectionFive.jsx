@@ -4,18 +4,20 @@ export const SectionFive = () => {
     return (
 <section class="section five">
 
-    <h1 className="five-text" >LOREM IMPS<br/> ELIT DOS</h1>
+    <h1 className="five-text" >COMIENZA YA TU<br/>TRANSFORMACIÓN</h1>
     <div className="use-cases" >
-        <h1 className="five-subheading" >LOREM IMPS</h1>
-        <p>01. Lorem ipsum dolor sit</p>
+        <h1 className="five-subheading" >AGENDA TU DEMO</h1>
+        <p>01. Mejora en la diabetes y sindrome metabó1ico</p>
         <div className="divide" />
-        <p>02. Amet consectetur adipiscing</p>
+        <p>02. Reducci6n de la inflamación general</p>
         <div className="divide" />
-        <p>03. Elit sed do eiusmod tempor</p>
+        <p>03. Mayor rendimiento y recuperaci6n rápida</p>
         <div className="divide" />
-        <p>04. Incididunt ut labore et dolore</p>
+        <p>04.Retrasa eI desarrollo de enfermedades neurodegenerativas</p>
         <div className="divide" />
-        <h1 className="five-subheading" >LOREM MAGNA ALIQUA</h1>
+        <p>05. Apoyo en la prevención y tratamiento del cáncer</p>
+        <div className="divide" />
+        <h1 className="five-subheading" >AGENDA TU DEMO</h1>
     </div>
 
 </section>

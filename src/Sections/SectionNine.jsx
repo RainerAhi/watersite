@@ -5,10 +5,10 @@ export const SectionNine = () => {
         <section className="section nine" >
 
             <div className="nine-container" >
-                <h1 className="nine-main" >LOREM IMPSUM ELIT</h1>
-                <p className="nine-description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                <h1 className="nine-main" >KANGEN LEVELUK K8</h1>
+                <p className="nine-description" >Transforma tu vida con la cuspide de Ia tecnologia de salud con el Leveluk K8, el primer paso a revolucionar tu salud y bienestar.</p>
                 <div className="buy-container" >
-                    <h1>LOREM ELIT</h1>
+                    <h1>AGENDA TU DEMO | CONOCE MÁS MODELOS</h1>
                 </div>
             </div>
 

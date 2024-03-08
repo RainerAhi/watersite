@@ -5,11 +5,11 @@ export const SectionTwo = () => {
 <section className="section two">
     <div className="two-box" >
     <div className="twotext">
-        <h1 className="two-subheading" >LOREM IPSUM DOLOR SIT AMET</h1>
-        <h1 className="two-title" >LOREM IPSUM DOLOR SIT</h1>
-        <p className="two-description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h1 className="two-subheading" >Hidratación es Salud</h1>
+        <h1 className="two-title" >KANGEN es Hidratación</h1>
+        <p className="two-description" >Por fin Ilego a México Ia mejor manera de hidratarse, para ti y para tu familia, los beneficios son innumerables.</p>
         <div className="learn-more" >
-            <h1>LOREM IPSUM</h1>
+            <h1>Agenda tu Demo</h1>
         </div>
     </div>
     </div>
