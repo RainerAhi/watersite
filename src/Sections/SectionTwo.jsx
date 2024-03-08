@@ -2,8 +2,8 @@ import React from "react";
 
 export const SectionTwo = () => {
     return (
-<section class="section two">
-    <div class="twotext">
+<section className="section two">
+    <div className="twotext">
         <h1 className="two-subheading" >LOREM IPSUM DOLOR SIT AMET</h1>
         <h1 className="two-title" >LOREM IPSUM DOLOR SIT</h1>
         <p className="two-description" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

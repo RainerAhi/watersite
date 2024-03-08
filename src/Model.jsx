@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -6,6 +6,7 @@ import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 
 export default function Model(props) {
+
 
   const { camera, scene } = useThree()
 
@@ -15,13 +16,21 @@ export default function Model(props) {
 
   const tl = gsap.timeline()
 
+  let mm  = gsap.matchMedia();
+
   useLayoutEffect(() => {
 
-    //FIRST TO SECOND
+    mm.add({
+      isDesktop: "(min-width: 800px)",
+      isMobile: "(max-width: 799px)"
+    }, (context) => {
+      let { isMobile, isDesktop } = context.conditions;
+
+      //FIRST TO SECOND
 
     tl
     .to(model.current.rotation, {
-      z: -Math.PI * 0.25,
+      z: isMobile ? -Math.PI * 0.3 : -Math.PI * 0.25,
       scrollTrigger: {
         trigger: ".two",
         start: "top bottom",
@@ -34,7 +43,7 @@ export default function Model(props) {
     .to(scene.position, {
       z: 0,
       y: 0,
-      x: -1.5,
+      x: isMobile ? 0 : -1.5,
 
       scrollTrigger: {
         trigger: ".two",
@@ -49,7 +58,7 @@ export default function Model(props) {
 
     .to(scene.position, {
       z: 0,
-      x: 3,
+      x: isMobile ? 0 : 3,
       y: 0,
       scrollTrigger: {
         trigger: ".three",
@@ -61,7 +70,7 @@ export default function Model(props) {
     })
 
     .to(model.current.rotation, {
-      z: Math.PI * 0.25,
+      z: isMobile ? Math.PI * 0.3  : Math.PI * 0.25,
       scrollTrigger: {
         trigger: ".three",
         start: "top bottom",
@@ -75,7 +84,7 @@ export default function Model(props) {
     
     .to(scene.position, {
       z: 0,
-      x: 0.25,
+      x: isMobile ? 0 : 0.25,
       y: 0,
       scrollTrigger: {
         trigger: ".four",
@@ -112,9 +121,9 @@ export default function Model(props) {
     })
 
     .to(scene.position, {
-      z: -3,
-      x: 0.25,
-      y: 0,
+      z: isMobile ? -1 : -3,
+      x: isMobile ? 0 : 0.25,
+      y: isMobile ? 0 : 0,
       scrollTrigger: {
         trigger: ".five",
         start: "top bottom",
@@ -153,9 +162,9 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 4,
-      y: 4,
-      z: 4,
+      x: isMobile ? 2 : 4,
+      y: isMobile ? 2 : 4,
+      z: isMobile ? 2 : 4,
       scrollTrigger: {
         trigger: ".six",
         start: "top bottom",
@@ -168,9 +177,9 @@ export default function Model(props) {
     //SIX TO SEVEN
 
     .to(bracelet.current.scale, {
-      x: 2.5,
-      y: 2.5,
-      z: 2.5,
+      x: isMobile ? 1.5 : 2.5,
+      y: isMobile ? 1.5 : 2.5,
+      z: isMobile ? 1.5 : 2.5,
       scrollTrigger: {
         trigger: ".seven",
         start: "top bottom",
@@ -182,7 +191,7 @@ export default function Model(props) {
 
     .to(scene.position, {
       z: 0,
-      x: 3,
+      x: isMobile ? 0 : 3,
       y: 0,
       scrollTrigger: {
         trigger: ".seven",
@@ -232,7 +241,7 @@ export default function Model(props) {
 
     .to(scene.position, {
       z: 0,
-      x: -2,
+      x: isMobile ? 0 : -2,
       y: 0,
       scrollTrigger: {
         trigger: ".nine",
@@ -244,9 +253,9 @@ export default function Model(props) {
     })
 
     .to(bracelet.current.scale, {
-      x: 3,
-      y: 3,
-      z: 3,
+      x: isMobile ? 2 : 3,
+      y: isMobile ? 2 : 3,
+      z: isMobile ? 2 : 3,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -257,9 +266,9 @@ export default function Model(props) {
     })
 
     .to(model.current.scale, {
-      x: 0.75,
-      y: 0.75,
-      z: 0.75,
+      x: isMobile ? 0.5 : 0.75,
+      y: isMobile ? 0.5 : 0.75,
+      z: isMobile ? 0.5 : 0.75,
       scrollTrigger: {
         trigger: ".nine",
         start: "top bottom",
@@ -270,14 +279,41 @@ export default function Model(props) {
     })
 
 
+    })
+    
+
+
+
+
 
   }, [])
+
+
+  const [isMobileOut, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 767);
+    };
+
+    // Add event listener to listen for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Initial check for mobile device on component mount
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
 
   const { nodes, materials } = useGLTF("./watermachine.glb");
   return (
     <group {...props} dispose={null}>
-      <group ref={model} scale={ 1.5 } rotation={[Math.PI / 2, 0, 0]} >
+      <group ref={model} scale={ isMobileOut ? 1 : 1.5 } rotation={[Math.PI / 2, 0, 0]} >
       <group
         position={[0.046, 0, 0.662]}
         rotation={[Math.PI / 2, 0, 0]}
